@@ -21,7 +21,7 @@ def Kt(t):
         return 0xCA62C1D6
 
 def Ch(x, y, z):
-    return (x & y) ^ ((~x & 0xFFFFFFFF) & z)  # FIXED masking
+    return (x & y) ^ ((~x & 0xFFFFFFFF) & z) 
 
 def Parity(x, y, z):
     return x ^ y ^ z
