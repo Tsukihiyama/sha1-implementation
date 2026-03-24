@@ -1,5 +1,4 @@
 import struct
-from multiprocessing import Pool
 
 def pad_message(message):
     original_byte_len = len(message)
