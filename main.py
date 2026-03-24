@@ -1,5 +1,4 @@
 import struct
-import time
 from multiprocessing import Pool
 
 def pad_message(message):
@@ -7,7 +6,7 @@ def pad_message(message):
     message += b'\x80'
     while (len(message) * 8) % 512 != 448:
         message += b'\x00'
-    message += struct.pack('>Q', original_byte_len * 8)  # FIXED endian
+    message += struct.pack('>Q', original_byte_len * 8)
     return message
 
 def Kt(t):
